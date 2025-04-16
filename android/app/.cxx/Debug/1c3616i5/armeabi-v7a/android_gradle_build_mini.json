@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Bhagi\\Downloads\\flutter_windows_3.3.2-stable\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Bhagi\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Bhagi\\OneDrive\\Desktop\\codecanyon-lY9rPybN-stackfood-multi-restaurant-food-ordering-restaurant-app-v10\\Restaurant app\\android\\app\\.cxx\\Debug\\1c3616i5\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Bhagi\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Bhagi\\OneDrive\\Desktop\\codecanyon-lY9rPybN-stackfood-multi-restaurant-food-ordering-restaurant-app-v10\\Restaurant app\\android\\app\\.cxx\\Debug\\1c3616i5\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

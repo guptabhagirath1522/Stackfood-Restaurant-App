@@ -1,0 +1,2 @@
+E:/codecanyon-lY9rPybN-stackfood-multi-restaurant-food-ordering-restaurant-app-v10/Restaurant app/android/app/.cxx/Debug/1r5j2k3k/x86_64/CMakeFiles/edit_cache.dir
+E:/codecanyon-lY9rPybN-stackfood-multi-restaurant-food-ordering-restaurant-app-v10/Restaurant app/android/app/.cxx/Debug/1r5j2k3k/x86_64/CMakeFiles/rebuild_cache.dir

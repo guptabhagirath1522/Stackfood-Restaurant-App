@@ -1,0 +1,2 @@
+/Users/learning/StackFood-Restaurant-App/android/app/.cxx/Debug/35b5m4r2/x86/CMakeFiles/edit_cache.dir
+/Users/learning/StackFood-Restaurant-App/android/app/.cxx/Debug/35b5m4r2/x86/CMakeFiles/rebuild_cache.dir
