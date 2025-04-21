@@ -1,4 +1,4 @@
-package com.sixamtech.stack_food_vandor
+package com.carrotfooddeliv.store
 
 import io.flutter.embedding.android.FlutterActivity
 
