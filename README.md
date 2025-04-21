@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # Stackfood-Restaurant-App
 Stackfood Restaurant App
-=======
-# stackfood_multivendor_restaurant
 
 A new Flutter application.
 
