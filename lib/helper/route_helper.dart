@@ -4,6 +4,8 @@ import 'package:stackfood_multivendor_restaurant/features/addon/screens/add_addo
 import 'package:stackfood_multivendor_restaurant/features/advertisement/screens/advertisement_details_screen.dart';
 import 'package:stackfood_multivendor_restaurant/features/advertisement/screens/advertisement_list_screen.dart';
 import 'package:stackfood_multivendor_restaurant/features/advertisement/screens/create_advertisement_screen.dart';
+import 'package:stackfood_multivendor_restaurant/features/auth/screens/phone_login_screen.dart';
+import 'package:stackfood_multivendor_restaurant/features/auth/screens/phone_verification_screen.dart';
 import 'package:stackfood_multivendor_restaurant/features/business/screens/subscription_payment_screen.dart';
 import 'package:stackfood_multivendor_restaurant/features/business/screens/subscription_success_or_failed_screen.dart';
 import 'package:stackfood_multivendor_restaurant/features/campaign/screens/campaign_details_screen.dart';
@@ -69,7 +71,9 @@ class RouteHelper {
   static const String splash = '/splash';
   static const String language = '/language';
   static const String signIn = '/sign-in';
+  static const String phoneLogin = '/phone-login';
   static const String verification = '/verification';
+  static const String phoneVerification = '/phone-verification';
   static const String main = '/main';
   static const String forgotPassword = '/forgot-password';
   static const String resetPassword = '/reset-password';
@@ -140,8 +144,11 @@ class RouteHelper {
 
   static String getLanguageRoute(String page) => '$language?page=$page';
   static String getSignInRoute() => signIn;
+  static String getPhoneLoginRoute() => phoneLogin;
   static String getVerificationRoute(String email) =>
       '$verification?email=$email';
+  static String getVerifyPhoneRoute(String phone) =>
+      '$phoneVerification?phone=$phone';
   static String getMainRoute(String page) => '$main?page=$page';
   static String getForgotPassRoute() => forgotPassword;
   static String getResetPasswordRoute(
@@ -321,13 +328,15 @@ class RouteHelper {
           }
           return SplashScreen(body: data);
         }),
-    GetPage(
-        name: language,
-        page: () => LanguageScreen(fromMenu: Get.parameters['page'] == 'menu')),
+    GetPage(name: language, page: () => const LanguageScreen(fromMenu: false)),
     GetPage(name: signIn, page: () => const SignInScreen()),
+    GetPage(name: phoneLogin, page: () => const PhoneLoginScreen()),
     GetPage(
         name: verification,
         page: () => VerificationScreen(email: Get.parameters['email'])),
+    GetPage(
+        name: phoneVerification,
+        page: () => PhoneVerificationScreen(phone: Get.parameters['phone']!)),
     GetPage(
         name: main,
         page: () => DashboardScreen(

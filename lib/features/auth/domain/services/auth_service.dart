@@ -24,6 +24,16 @@ class AuthService implements AuthServiceInterface {
   }
 
   @override
+  Future<Response> sendOtp(String phone) async {
+    return await authRepoInterface.sendOtp(phone);
+  }
+
+  @override
+  Future<Response> verifyOtp(String phone, String otp) async {
+    return await authRepoInterface.verifyOtp(phone, otp);
+  }
+
+  @override
   Future<bool> saveUserToken(String token, String zoneTopic) async {
     return await authRepoInterface.saveUserToken(token, zoneTopic);
   }

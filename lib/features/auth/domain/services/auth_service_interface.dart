@@ -9,6 +9,8 @@ import 'package:stackfood_multivendor_restaurant/features/profile/domain/models/
 
 abstract class AuthServiceInterface {
   Future<dynamic> login(String? email, String password);
+  Future<dynamic> sendOtp(String phone);
+  Future<dynamic> verifyOtp(String phone, String otp);
   Future<bool> saveUserToken(String token, String zoneTopic);
   Future<dynamic> updateToken({String notificationDeviceToken = ''});
   bool isLoggedIn();

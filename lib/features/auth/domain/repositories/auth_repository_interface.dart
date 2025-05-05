@@ -4,6 +4,8 @@ import 'package:image_picker/image_picker.dart';
 
 abstract class AuthRepositoryInterface implements RepositoryInterface {
   Future<dynamic> login(String? email, String password);
+  Future<dynamic> sendOtp(String phone);
+  Future<dynamic> verifyOtp(String phone, String otp);
   Future<bool> saveUserToken(String token, String zoneTopic);
   Future<dynamic> updateToken({String notificationDeviceToken = ''});
   bool isLoggedIn();
@@ -15,7 +17,8 @@ abstract class AuthRepositoryInterface implements RepositoryInterface {
   String getUserToken();
   void setNotificationActive(bool isActive);
   Future<dynamic> toggleRestaurantClosedStatus();
-  Future<dynamic> registerRestaurant(Map<String, String> data, XFile? logo, XFile? cover, List<MultipartDocument> additionalDocument);
+  Future<dynamic> registerRestaurant(Map<String, String> data, XFile? logo,
+      XFile? cover, List<MultipartDocument> additionalDocument);
   Future<bool> saveIsRestaurantRegistration(bool status);
   bool getIsRestaurantRegistration();
 }

@@ -188,6 +188,24 @@ class _SignInScreenState extends State<SignInScreen> {
                             ])),
                           )
                         : const SizedBox(),
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        minimumSize: const Size(1, 40),
+                      ),
+                      onPressed: () {
+                        Get.toNamed(RouteHelper.getPhoneLoginRoute());
+                      },
+                      child: RichText(
+                        text: TextSpan(children: [
+                          TextSpan(
+                            text: 'login_with_phone'.tr,
+                            style: robotoRegular.copyWith(
+                              color: Theme.of(context).primaryColor,
+                            ),
+                          ),
+                        ]),
+                      ),
+                    ),
                   ]);
                 }),
               ),

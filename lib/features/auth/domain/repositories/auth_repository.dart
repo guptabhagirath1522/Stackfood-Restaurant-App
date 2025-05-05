@@ -22,6 +22,19 @@ class AuthRepository implements AuthRepositoryInterface {
   }
 
   @override
+  Future<Response> sendOtp(String phone) async {
+    return await apiClient.postData(AppConstants.sendOtpUri, {"phone": phone},
+        handleError: false);
+  }
+
+  @override
+  Future<Response> verifyOtp(String phone, String otp) async {
+    return await apiClient.postData(
+        AppConstants.verifyOtpUri, {"phone": phone, "otp": otp},
+        handleError: false);
+  }
+
+  @override
   Future<bool> saveUserToken(String token, String zoneTopic) async {
     apiClient.token = token;
     apiClient.updateHeader(

@@ -160,6 +160,32 @@ class AuthController extends GetxController implements GetxService {
     return responseModel;
   }
 
+  Future<ResponseModel> sendOtp(String phone) async {
+    _isLoading = true;
+    update();
+    Response response = await authServiceInterface.sendOtp(phone);
+    ResponseModel responseModel;
+    if (response.statusCode == 200) {
+      responseModel = ResponseModel(true, 'OTP sent successfully');
+    } else {
+      responseModel = ResponseModel(false, response.statusText!);
+    }
+    _isLoading = false;
+    update();
+    return responseModel;
+  }
+
+  Future<ResponseModel> verifyOtp(String phone, String otp) async {
+    _isLoading = true;
+    update();
+    Response response = await authServiceInterface.verifyOtp(phone, otp);
+    ResponseModel? responseModel =
+        await authServiceInterface.manageLogin(response);
+    _isLoading = false;
+    update();
+    return responseModel ?? ResponseModel(false, 'Failed to verify OTP');
+  }
+
   void pickImageForRegistration(bool isLogo, bool isRemove) async {
     if (isRemove) {
       _pickedLogo = null;
